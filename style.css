@@ -1,0 +1,45 @@
+body{
+    background-color: chocolate;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Mouse1{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    transition: 0.1s;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    /* z-index: 100000000; */
+    user-select: none;
+    pointer-events: none;
+
+}
+#Mouse2{
+    position: absolute;
+    background-color: #fff;
+    width: 10px;
+    height:10px;
+    border-radius: 50%;
+    transition: 0.05s;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    /* z-index: 100000001; */
+    user-select: none;
+    pointer-events: none;
+}
+.link:hover ~ #Mouse1{
+    width: 5px;
+    height:5px;
+}
+.link:hover ~ #Mouse2{
+    width: 15px;
+    height:15px;
+}
